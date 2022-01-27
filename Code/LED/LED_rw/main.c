@@ -5,6 +5,6 @@ void main()
 {
 	while(1)
 	{
-		
+		P2=
 	}	
 }
