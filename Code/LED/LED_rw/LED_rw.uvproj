@@ -385,6 +385,13 @@
         </Group>
         <Group>
           <GroupName>Hardware</GroupName>
+          <Files>
+            <File>
+              <FileName>Delayms.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Src\Delayms.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
