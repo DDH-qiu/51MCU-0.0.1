@@ -1,9 +1,9 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/27/2022  08:50:37  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/27/2022  19:31:19  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
-C:\PROGRAM FILES\MDK\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Project PRINT (.\Listings\Project.m51) RAMSIZE (25
->> 6)
+C:\PROGRAM FILES\MDK\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\Delayms.obj TO .\Objects\Project PRINT (.\Listings\P
+>> roject.m51) RAMSIZE (256)
 
 
 MEMORY MODEL: SMALL
@@ -11,6 +11,7 @@ MEMORY MODEL: SMALL
 
 INPUT MODULES INCLUDED:
   .\Objects\main.obj (MAIN)
+  .\Objects\Delayms.obj (DELAYMS)
   C:\PROGRAM FILES\MDK\C51\LIB\C51S.LIB (?C_STARTUP)
 
 
@@ -26,8 +27,9 @@ LINK MAP OF MODULE:  .\Objects\Project (MAIN)
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
-            CODE    0003H     000CH     UNIT         ?C_C51STARTUP
-            CODE    000FH     0002H     UNIT         ?PR?MAIN?MAIN
+            CODE    0003H     0042H     UNIT         ?PR?MAIN?MAIN
+            CODE    0045H     0012H     UNIT         ?PR?_DELAYMS?DELAYMS
+            CODE    0057H     000CH     UNIT         ?C_C51STARTUP
 
 
 
@@ -40,6 +42,9 @@ SEGMENT
 ?C_C51STARTUP
   +--> ?PR?MAIN?MAIN
 
+?PR?MAIN?MAIN
+  +--> ?PR?_DELAYMS?DELAYMS
+
 
 
 SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
@@ -49,18 +54,62 @@ SYMBOL TABLE OF MODULE:  .\Objects\Project (MAIN)
 
   -------         MODULE        MAIN
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:000FH         PUBLIC        main
+  D:00A0H         PUBLIC        P2
+  C:0003H         PUBLIC        main
   -------         PROC          MAIN
-  C:000FH         LINE#         4
-  C:000FH         LINE#         5
-  C:000FH         LINE#         6
-  C:000FH         LINE#         7
-  C:000FH         LINE#         9
+  C:0003H         LINE#         4
+  C:0003H         LINE#         5
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/27/2022  19:31:19  PAGE 2
+
+
+  C:0003H         LINE#         6
+  C:0003H         LINE#         7
+  C:0003H         LINE#         8
+  C:0006H         LINE#         9
+  C:000BH         LINE#         10
+  C:000EH         LINE#         11
+  C:0013H         LINE#         12
+  C:0016H         LINE#         13
+  C:001BH         LINE#         14
+  C:001EH         LINE#         15
+  C:0023H         LINE#         16
+  C:0026H         LINE#         17
+  C:002BH         LINE#         18
+  C:002EH         LINE#         19
+  C:0033H         LINE#         20
+  C:0036H         LINE#         21
+  C:003BH         LINE#         22
+  C:003EH         LINE#         23
+  C:0043H         LINE#         24
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/27/2022  08:50:37  PAGE 2
+  -------         MODULE        DELAYMS
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0045H         PUBLIC        _Delayms
+  -------         PROC          _DELAYMS
+  D:0007H         SYMBOL        xms
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0005H         SYMBOL        j
+  -------         ENDDO         
+  C:0045H         LINE#         4
+  C:0045H         LINE#         5
+  C:0045H         LINE#         7
+  C:0046H         LINE#         8
+  C:0047H         LINE#         9
+  C:0048H         LINE#         10
+  C:004BH         LINE#         11
+  C:004BH         LINE#         12
+  C:004DH         LINE#         13
+  C:004FH         LINE#         15
+  C:004FH         LINE#         16
+  C:0051H         LINE#         17
+  C:0053H         LINE#         18
+  C:0054H         LINE#         19
+  C:0056H         LINE#         21
+  -------         ENDPROC       _DELAYMS
+  -------         ENDMOD        DELAYMS
 
-
-Program Size: data=9.0 xdata=0 code=17
+Program Size: data=9.0 xdata=0 code=99
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
