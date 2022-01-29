@@ -195,8 +195,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Src\Delayms.c</PathWithFileName>
-      <FilenameWithoutPath>Delayms.c</FilenameWithoutPath>
+      <PathWithFileName>.\Src\LCD1602.c</PathWithFileName>
+      <FilenameWithoutPath>LCD1602.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
